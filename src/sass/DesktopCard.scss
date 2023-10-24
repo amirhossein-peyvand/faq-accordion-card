@@ -1,0 +1,113 @@
+@import "./colors.scss";
+
+.desktopCard {
+  width: clamp(400px, 70%, 80rem);
+  margin: 0 auto;
+  display: flex;
+  min-height: 75vh;
+  max-height: 75vh;
+  background-color: $light-grayis-blue;
+  border-radius: 20px;
+  overflow: hidden;
+
+  .left {
+    width: 50%;
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+
+    .imageContainer {
+      display: flex;
+
+      align-items: center;
+      width: 90%;
+      background: url("../assets/bg-pattern-desktop.svg");
+      background-repeat: no-repeat;
+      background-position: -30px 60px;
+      background-size: contain;
+
+      img {
+        width: 100%;
+        transform: translateX(-30px);
+      }
+    }
+
+    .box {
+      width: 120px;
+      position: absolute;
+      left: -7%;
+      bottom: 32%;
+    }
+  }
+
+  .contentContainer {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 3rem 6rem 3rem 0;
+    row-gap: 2rem;
+
+    .title {
+      font-size: 2.3rem;
+      color: $very-dark-desaturated-blue;
+    }
+
+    & > div {
+      .collapsible {
+        cursor: pointer;
+        width: 100%;
+        border: none;
+        text-align: left;
+        outline: none;
+      }
+
+      .active,
+      .collapsible:hover {
+        background-color: #ccc;
+      }
+
+      .content {
+        padding: 0 18px;
+        display: none;
+        overflow: hidden;
+      }
+    }
+
+    // dl {
+    //   display: flex;
+    //   flex-direction: column;
+    //   row-gap: 1.5rem;
+
+    //   div {
+    //     display: flex;
+    //     flex-direction: column;
+    //     row-gap: 1rem;
+    //     padding-bottom: 1rem;
+    //     border-bottom: 1px solid hsl(240, 6%, 81%);
+
+    //     dt {
+    //       font-weight: 700;
+    //       font-size: 1.2rem;
+    //       letter-spacing: 0.5px;
+    //       color: $very-dark-desaturated-blue;
+    //       display: flex;
+    //       justify-content: space-between;
+    //       align-items: center;
+    //       img {
+    //         width: 1.1rem;
+    //         cursor: pointer;
+    //         transition: all 0.3s;
+    //       }
+    //     }
+
+    //     dd {
+    //       letter-spacing: 0.5px;
+    //       color: $dark-grayish-blue;
+    //       font-size: 1.01rem;
+    //       line-height: 1.4;
+    //     }
+    //   }
+    // }
+  }
+}

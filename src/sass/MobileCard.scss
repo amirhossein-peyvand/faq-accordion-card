@@ -1,0 +1,32 @@
+@import "./colors.scss";
+
+.mobileCard {
+  width: clamp(200px, 95%, 55rem);
+  background-color: $light-grayis-blue;
+  border-radius: 25px;
+
+  .imageContainer {
+    position: relative;
+
+    img {
+      width: 16rem !important;
+      position: absolute;
+      top: -50%;
+      right: 50%;
+      transform: translate(50%, -50%);
+    }
+  }
+
+  .contentContainer {
+    margin-top: 10rem;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    row-gap: 2rem;
+
+    h1 {
+      text-align: center;
+      font-size: 2rem;
+    }
+  }
+}
